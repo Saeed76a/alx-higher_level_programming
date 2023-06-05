@@ -15,7 +15,7 @@ int check_cycle(listint_t *list)
 	while (current && tmp)
 	{
 		current = current->next;
-		tmp = tmp->next->next->next;
+		tmp = tmp->next->next;
 		if (tmp == current)
 			return (1);
 	}

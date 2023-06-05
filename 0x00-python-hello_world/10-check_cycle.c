@@ -12,14 +12,14 @@ int check_cycle(listint_t *list)
 	if (!list)
 		return (0);
 	current = list;
-	while (current)
+	while (current->next)
 	{
 		tmp = list;
 		if (current == current->next)
 			return (1);
 		while (tmp != current)
 		{
-			if (current->next->next == tmp)
+			if (current->next == tmp)
 				return (1);
 			tmp = tmp->next;
 		}

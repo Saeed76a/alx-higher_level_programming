@@ -19,7 +19,7 @@ int check_cycle(listint_t *list)
 			return (1);
 		while (tmp != current)
 		{
-			if (current->next == tmp)
+			if (current->next->next == tmp)
 				return (1);
 			tmp = tmp->next;
 		}

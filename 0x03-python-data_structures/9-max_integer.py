@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def max_integer(my_list=[]):
     if len(my_list) > 0:
-        a = -10000000000000000000
+        a = -100000000
         for i in my_list:
             b = a > i
             if b is False:

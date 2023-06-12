@@ -10,18 +10,12 @@ int is_palindrome(listint_t **head)
     listint_t *self = *head, *mirror = *head;
     int vues = 0, i = 0;
 
-    if (!self || !(self->next))
-        return (1);
-    while (mirror->next)
+    while (mirror && mirror->next)
     {
         vues++;
         mirror = mirror->next;
     }
-    if (mirror->n != self->n)
-        return (0);
-    self = self->next;
-    vues -= 2;
-    while (self != mirror)
+    while (self != mirror && self && self->next)
     {
         i = 0;
         mirror = self;

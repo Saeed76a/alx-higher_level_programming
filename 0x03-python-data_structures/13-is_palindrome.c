@@ -21,21 +21,20 @@ int is_palindrome(listint_t **head)
         return (0);
     self = self->next;
     vues -= 2;
-    while (self != mirror && mirror->next != self)
+    while (self != mirror)
     {
         i = 0;
         mirror = self;
         while (i < vues)
         {
             mirror = mirror->next;
-            if (!mirror->next)
-                break;
             i++;
         }
         if (mirror->n != self->n)
             return (0);
-        vues -= 2;        
-        self = self->next;
+        vues -= 2;
+        if (mirror->next != self->next)
+            self = self->next;
     }
     return (1);
 }

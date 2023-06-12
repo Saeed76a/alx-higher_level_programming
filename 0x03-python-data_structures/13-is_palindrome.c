@@ -10,7 +10,7 @@ int is_palindrome(listint_t **head)
     listint_t *self = *head, *mirror = *head;
     int vues = 0, i = 0;
 
-    if (!self)
+    if (!self || !(self->next))
         return (1);
     while (mirror->next)
     {

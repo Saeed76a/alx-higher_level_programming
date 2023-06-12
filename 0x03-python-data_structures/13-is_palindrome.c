@@ -1,5 +1,4 @@
 #include "lists.h"
-#include <stdio.h>
 /**
  * is_palindrome - look for palindrome
  * @head: point to head
@@ -18,7 +17,6 @@ int is_palindrome(listint_t **head)
         vues++;
         mirror = mirror->next;
     }
-    printf("%d\n", vues);
     while (self != mirror && vues > 0)
     {
         i = 0;

@@ -15,7 +15,7 @@ int is_palindrome(listint_t **head)
         vues++;
         mirror = mirror->next;
     }
-    while (self != mirror && self && self->next)
+    while (self != mirror)
     {
         i = 0;
         mirror = self;

@@ -5,11 +5,12 @@ def safe_print_list(my_list=[], x=0):
             Exception.__init__(self, *args, **kwargs)
     try:
         i = 0
-        for num in my_list:
-            print(num, end='')
-            i += 1
-            if i == x:
-                break
+        if my_list:
+            for num in my_list:
+                print(num, end='')
+                i += 1
+                if i == x:
+                    break
         print()
         if i != x:
             raise outOfRange

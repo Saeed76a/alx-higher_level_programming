@@ -1,20 +1,12 @@
 #!/usr/bin/python3
 def safe_print_list(my_list=[], x=0):
-    class outOfRange(Exception):
-        def __init__(self, *args, **kwargs):
-            Exception.__init__(self, *args, **kwargs)
-    try:
         i = 0
         if my_list:
-            for num in my_list:
-                print(num, end='')
-                i += 1
-                if i == x:
+            for i in range(x):
+                try:
+                    print("{}".format(my_list[i]), end='')
+                    i += 1
+                except:
                     break
-        print()
-        if i != x:
-            raise outOfRange
-        else:
-            return x
-    except outOfRange:
+        print("\n", end='')
         return i

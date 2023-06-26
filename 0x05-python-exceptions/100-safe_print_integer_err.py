@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-from sys import exc_info as error, stderr
+import sys
 
 
 def safe_print_integer_err(value):
@@ -7,5 +7,5 @@ def safe_print_integer_err(value):
         print("{:d}".format(value))
         return (True)
     except (TypeError, ValueError):
-        print("{}".format(error()[1]), file=stderr)
+        print("{}".format(sys.exc_info()[1]), file=sys.stderr)
         return (False)

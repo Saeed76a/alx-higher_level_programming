@@ -25,7 +25,6 @@ class Square:
         """retrieve the size"""
         return self.__size
 
-    @size.setter
     def size(self, value):
         """to set the size
         Args:

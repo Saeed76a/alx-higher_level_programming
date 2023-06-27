@@ -15,8 +15,7 @@ class MagicClass:
         self.__radius = 0
         if not isinstance(raduis, int) and not isinstance(raduis, float):
             raise TypeError("radius must be a number")
-        else:
-            self.__radius = radius
+        self.__radius = radius
         """Return the current radius"""
         return self.__radius
 

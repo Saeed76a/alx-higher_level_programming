@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-"""define the Python class MagicClass that does exactly the same\
-      as the following Python bytecode:"""
-import math
+"""define MagicClass the same as the following Python bytecode:"""
+from math import pi
 
 
 class MagicClass:
@@ -22,8 +21,8 @@ class MagicClass:
 
     def area(self):
         """Return the area of the circle"""
-        return (self.__radius ** 2 * math.pi)
+        return (self.__radius ** 2 * pi)
 
     def circumference(self):
         """Return the circumference of the circle"""
-        return (2 * math.pi * self.__radius)
+        return (2 * pi * self.__radius)

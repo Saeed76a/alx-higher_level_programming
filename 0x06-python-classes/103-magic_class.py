@@ -7,7 +7,7 @@ from math import pi
 class MagicClass:
     """set a circle"""
 
-    def __init__(self, radius=0):
+    def __init__(self, radius):
         """intialize MagicClass:
         Args:
             radius (float and int): the raduis of the circle
@@ -17,8 +17,6 @@ class MagicClass:
             raise TypeError("radius must be a number")
         else:
             self.__radius = radius
-        """Return the current radius"""
-        return self.__radius
 
     def area(self):
         """Return the area of the circle"""

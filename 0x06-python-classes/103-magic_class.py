@@ -13,7 +13,7 @@ class MagicClass:
             radius (float and int): the raduis of the circle
         """
         self.__radius = 0
-        if type(raduis) is not int and is not float:
+        if type(raduis) is not int and type(raduis) is not float:
             raise TypeError("radius must be a number")
         else:
             self.__radius = radius

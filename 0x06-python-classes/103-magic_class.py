@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""define MagicClass the same as the following Python bytecode:"""
+"""define MagicClass that does exactly the same\
+      as the following Python bytecode:"""
 from math import pi
 
 
@@ -8,6 +9,7 @@ class MagicClass:
 
     def __init__(self, radius):
         """intialize MagicClass:
+        
         Args:
             radius (float and int): the raduis of the circle
         """

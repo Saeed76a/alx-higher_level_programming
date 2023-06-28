@@ -18,9 +18,6 @@ class MagicClass:
             raise TypeError("radius must be a number")
         else:
             self.__radius = radius
-        """Return the current radius"""
-        return self.__radius
-
 
     def area(self):
         """Return the area of the circle"""

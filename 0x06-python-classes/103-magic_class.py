@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """define MagicClass that does exactly the same\
       as the following Python bytecode:"""
+
 from math import pi
 
 
@@ -13,12 +14,13 @@ class MagicClass:
             radius (float and int): the raduis of the circle
         """
         self.__radius = 0
-        if not isinstance(raduis, int) and not isinstance(raduis, float):
+        if not isinstance(radius, int) and not isinstance(radius, float):
             raise TypeError("radius must be a number")
         else:
             self.__radius = radius
-        """Return None"""
-        return None
+        """Return the current radius"""
+        return self.__radius
+
 
     def area(self):
         """Return the area of the circle"""

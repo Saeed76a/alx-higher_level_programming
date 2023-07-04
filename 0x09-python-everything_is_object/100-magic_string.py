@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-L = [-1]
+L = [0]
 def magic_string():
     L[0] += 1
-    return ("BestSchool" + (", BestSchool") * L[0])
+    return (", ".join(["BestSchool" for i in range(L[0])]))

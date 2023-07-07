@@ -6,6 +6,7 @@ _______________import__function__from__file_________________
 
 >>> add_integer = __import__('0-add_integer').add_integer
 
+       _______________Let's_check_it_________________
 ------------------------------------------------------------
 
 	>>> add_integer(1, "2")

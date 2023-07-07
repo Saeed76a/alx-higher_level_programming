@@ -82,8 +82,9 @@
 
 -----------------------------------------------------
 
-    >>> print(add_integer(10/3, 7))
-    10
+    >>> print(add_integer(float('inf')))
+    Traceback (most recent call last):
+    OverflowError: cannot convert float infinity to integer
 
 -----------------------------------------------------
 

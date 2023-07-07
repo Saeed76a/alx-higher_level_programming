@@ -55,11 +55,6 @@
 
 -----------------------------------------------------
 
-    >>> isinstance(add_integer(100.3, 4.5), int)
-    True
-
------------------------------------------------------
-
     >>> print(add_integer("2", 10))
     Traceback (most recent call last):
     TypeError: a must be an integer

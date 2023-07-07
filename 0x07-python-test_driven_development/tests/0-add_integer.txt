@@ -72,6 +72,10 @@
 
 -----------------------------------------------------
 
+    >>> type(add_integer(10))
+    <class 'int'>
+
+-----------------------------------------------------
     >>> print(add_integer(float('inf')))
     Traceback (most recent call last):
     OverflowError: cannot convert float infinity to integer
@@ -96,7 +100,7 @@
 
 -----------------------------------------------------
 
-    >>> print(add_integer(435, float('nan'))) 
+    >>> print(add_integer(43, float('nan'))) 
     Traceback (most recent call last):
     ValueError: cannot convert float NaN to integer
 

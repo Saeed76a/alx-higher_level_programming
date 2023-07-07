@@ -76,13 +76,13 @@
     <class 'int'>
 
 -----------------------------------------------------
-    >>> print(add_integer(float('inf')))
+    >>> add_integer(float('inf'))
     Traceback (most recent call last):
     OverflowError: cannot convert float infinity to integer
 
 -----------------------------------------------------
 
-    >>> print(add_integer(14, float('inf')))
+    >>> add_integer(14, float('inf'))
     Traceback (most recent call last):
     OverflowError: cannot convert float infinity to integer
 
@@ -94,13 +94,13 @@
 
 -----------------------------------------------------
 
-    >>> print(add_integer(float('nan'))) 
+    >>> add_integer(float('nan')) 
     Traceback (most recent call last):
     ValueError: cannot convert float NaN to integer
 
 -----------------------------------------------------
 
-    >>> print(add_integer(43, float('nan'))) 
+    >>> add_integer(43, float('nan')) 
     Traceback (most recent call last):
     ValueError: cannot convert float NaN to integer
 

@@ -8,50 +8,133 @@ _______________import__function__from__file_________________
 
 ------------------------------------------------------------
 
-	>>> add_integer(1, 2)
-	3
-
-------------------------------------------------------------
-
 	>>> add_integer(1, "2")
 	Traceback (most recent call last):
 	TypeError: b must be an integer
 
 ------------------------------------------------------------
+
+	>>> add_integer("2", 1)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+------------------------------------------------------------
+
+	>>> add_integer("2", "2")
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+------------------------------------------------------------
+
+	>>> add_integer("2")
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+------------------------------------------------------------
+
+	>>> add_integer(1, 2)
+	3
+
+------------------------------------------------------------
+
 
 	>>> add_integer(2)
 	100
 
 ------------------------------------------------------------
 
-	>>> add_integer(100.3, -2)
+	>>> add_integer(0, 0)
+	0
+
+------------------------------------------------------------
+
+	>>> add_integer(6666666666, 4444444445)
+	11111111111
+
+------------------------------------------------------------
+
+	>>> add_integer(3.15149265, 1)
+	4
+
+------------------------------------------------------------
+
+	>>> add_integer(1.999999999999999, 2.999999999999999)
+	3
+
+------------------------------------------------------------
+
+	>>> add_integer(1.99999999999999999, 2.9999999999999999)
+	5
+
+------------------------------------------------------------
+
+	>>> add_integer(-1, 1)
+	0
+
+------------------------------------------------------------
+
+	>>> add_integer(-98)
+	0
+
+------------------------------------------------------------
+
+	>>> add_integer(-1, -1)
+	-2
+
+------------------------------------------------------------
+
+	>>> add_integer(-1.999999999999999, -2.999999999999999)
+	-3
+
+------------------------------------------------------------
+
+	>>> add_integer(-1.9999999999999999, -2.9999999999999999)
+	-5
+
+------------------------------------------------------------
+
+	>>> add_integer(1 + 2, 2 + 2)
+	7
+
+------------------------------------------------------------
+
+	>>> add_integer(1 - 2, 2 - 2)
+	-1
+
+------------------------------------------------------------
+
+	>>> add_integer(1 - 2)
+	97
+
+------------------------------------------------------------
+
+	>>> add_integer((3 * 9 - 7) / 2)
+	108
+
+------------------------------------------------------------
+
+	>>> add_integer(1 - 2, add_integer(1 - 2, 0))
+	-2
+
+------------------------------------------------------------
+
+	>>> add_integer(1 - 2, add_integer(1 - 2))
+	96
+
+------------------------------------------------------------
+
+	>>> add_integer(1 - 2, add_integer(1 - 2, add_integer(add_integer(1, add_integer(0)), 1)))
 	98
 
 ------------------------------------------------------------
 
-	>>> add_integer(681779, 297266)
-	979045
-
-------------------------------------------------------------
-
-	>>> add_integer(3.445665564436333356644463545646466, 3)
-	6
-
-------------------------------------------------------------
-
-	>>> add_integer(1, "2")
+	>>> add_integer(21, "Am OMAR")
 	Traceback (most recent call last):
 	TypeError: b must be an integer
 
 ------------------------------------------------------------
 
-	>>> add_integer(4, "School")
-	Traceback (most recent call last):
-	TypeError: b must be an integer
-
-------------------------------------------------------------
-
-	>>> add_integer("Hello", 7)
+	>>> add_integer("We Got This Cohort", 13)
 	Traceback (most recent call last):
 	TypeError: a must be an integer
 
@@ -63,20 +146,73 @@ _______________import__function__from__file_________________
 
 ------------------------------------------------------------
 
-	>>> add_integer(2, float('inf'))
+	>>> add_integer(None, None)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+------------------------------------------------------------
+
+	>>> add_integer(13, float('inf'))
 	Traceback (most recent call last):
 	OverflowError: cannot convert float infinity to integer
 
 ------------------------------------------------------------
 
-	>>> add_integer(2, float('nan'))
+	>>> add_integer(1%, float('inf'))
+	Traceback (most recent call last):
+	SyntaxError: invalid syntax
+
+------------------------------------------------------------
+
+	>>> add_integer("Omar 21", float('inf'))
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+------------------------------------------------------------
+
+	>>> add_integer(float('inf'))
+	Traceback (most recent call last):
+	OverflowError: cannot convert float infinity to integer
+
+------------------------------------------------------------
+
+	>>> add_integer(float('inf'), 13)
+	Traceback (most recent call last):
+	OverflowError: cannot convert float infinity to integer
+
+------------------------------------------------------------
+
+	>>> add_integer(13, float('nan'))
 	Traceback (most recent call last):
 	ValueError: cannot convert float NaN to integer
 
 ------------------------------------------------------------
 
-	>>> type(add_integer(4, 2.3))
+	>>> add_integer(float('nan'))
+	Traceback (most recent call last):
+	ValueError: cannot convert float NaN to integer
+
+------------------------------------------------------------
+
+	>>> add_integer(1%, float('nan'))
+	Traceback (most recent call last):
+	SyntaxError: invalid syntax
+
+------------------------------------------------------------
+
+	>>> add_integer("Omar 21", float('nan'))
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+------------------------------------------------------------
+
+	>>> type(add_integer(13, add_integer(13.21)))
 	<class 'int'>
+
+------------------------------------------------------------
+
+	>>> isinstance(add_integer(13, add_integer(13.21)), int)
+	True
 
 ------------------------------------------------------------
 

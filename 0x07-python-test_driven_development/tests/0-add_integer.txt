@@ -65,6 +65,12 @@
 
 -----------------------------------------------------
 
+    >>> add_integer("ddsfsd", "hi")
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+-----------------------------------------------------
+
     >>> add_integer("2", 10)
     Traceback (most recent call last):
     TypeError: a must be an integer
@@ -80,11 +86,6 @@
     >>> add_integer(3, None)
     Traceback (most recent call last):
     TypeError: b must be an integer
-
------------------------------------------------------
-
-    >>> type(add_integer(10))
-    <class 'int'>
 
 -----------------------------------------------------
     >>> add_integer(float('inf'))
@@ -111,15 +112,9 @@
 
 -----------------------------------------------------
 
-    >>> add_integer(43, float('nan')) 
+    >>> add_integer(2, float('nan')) 
     Traceback (most recent call last):
     ValueError: cannot convert float NaN to integer
-
------------------------------------------------------
-
-	>>> add_integer(4, "School")
-	Traceback (most recent call last):
-	TypeError: b must be an integer
 
 -----------------------------------------------------
 ==========================================================================

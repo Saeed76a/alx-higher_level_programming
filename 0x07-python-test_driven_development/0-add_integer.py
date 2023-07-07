@@ -21,4 +21,4 @@ def add_integer(a, b=98):
         a = int(a)
     if not isinstance(b, int):
         b = int(b)
-    return (int(a) + int(b))
+    return (a + b)

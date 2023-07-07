@@ -94,7 +94,7 @@
 
 -----------------------------------------------------
 
-    >>> add_integer(float('nan')) 
+    >>> print(add_integer(float('nan'))) 
     Traceback (most recent call last): 
     ValueError: cannot convert float NaN to integer
 

@@ -7,61 +7,61 @@
 =============================call / exception=============================
 -----------------------------------------------------
 
-    >>> print(add_integer(1, 2))
+    >>> add_integer(1, 2)
     3
 
 -----------------------------------------------------
 
-    >>> print(add_integer(100, -2))
+    >>> add_integer(100, -2)
     98
 
 -----------------------------------------------------
 
-    >>> print(add_integer(2))
+    >>> add_integer(2)
     100
 
 -----------------------------------------------------
 
-    >>> print(add_integer(2.9))
+    >>> add_integer(2.9)
     100
 
 -----------------------------------------------------
 
-    >>> print(add_integer(100.3, 4.5))
+    >>> add_integer(100.3, 4.5)
     104
 
 -----------------------------------------------------
 
-    >>> print(add_integer(100, 4.5))
+    >>> add_integer(100, 4.5)
     104
 
 -----------------------------------------------------
 
-    >>> print(add_integer(100, "fdfd"))
+    >>> add_integer(100, "fdfd")
     Traceback (most recent call last):
     TypeError: b must be an integer
 
 -----------------------------------------------------
 
-    >>> print(add_integer("ddsfsd", 10))
+    >>> add_integer("ddsfsd", 10)
     Traceback (most recent call last):
     TypeError: a must be an integer
 
 -----------------------------------------------------
 
-    >>> print(add_integer("ddsfsd"))
+    >>> add_integer("ddsfsd")
     Traceback (most recent call last):
     TypeError: a must be an integer
 
 -----------------------------------------------------
 
-    >>> print(add_integer("2", 10))
+    >>> add_integer("2", 10)
     Traceback (most recent call last):
     TypeError: a must be an integer
 
 -----------------------------------------------------
 
-    >>> print(add_integer(None))
+    >>> add_integer(None)
     Traceback (most recent call last):
     TypeError: a must be an integer
 
@@ -83,7 +83,7 @@
 
 -----------------------------------------------------
 
-    >>> print(add_integer())
+    >>> add_integer()
     Traceback (most recent call last):
     TypeError: add_integer() missing 1 required positional argument: 'a'
 
@@ -98,6 +98,12 @@
     >>> add_integer(43, float('nan')) 
     Traceback (most recent call last):
     ValueError: cannot convert float NaN to integer
+
+-----------------------------------------------------
+
+		>>> add_integer(4, "School")
+		Traceback (most recent call last):
+		TypeError: b must be an integer
 
 -----------------------------------------------------
 ==========================================================================

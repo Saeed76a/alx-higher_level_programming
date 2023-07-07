@@ -55,11 +55,6 @@
 
 -----------------------------------------------------
 
-    >>> type(add_integer(8.5, 4.5))
-    <class int>
-
------------------------------------------------------
-
     >>> isinstance(add_integer(100.3, 4.5), int)
     True
 
@@ -88,6 +83,12 @@
 
 -----------------------------------------------------
 
+    >>> print(add_integer(14, float('inf')))
+    Traceback (most recent call last):
+    OverflowError: cannot convert float infinity to integer
+
+-----------------------------------------------------
+
     >>> print(add_integer())
     Traceback (most recent call last):
     TypeError: add_integer() missing 1 required positional argument: 'a'
@@ -98,5 +99,12 @@
     Traceback (most recent call last): 
     ValueError: cannot convert float NaN to integer
 
+-----------------------------------------------------
+
+    >>> print(add_integer(435, float('nan'))) 
+    Traceback (most recent call last): 
+    ValueError: cannot convert float NaN to integer
+
+-----------------------------------------------------
 ==========================================================================
 ******************************************END TESTS***********************************

@@ -31,6 +31,37 @@ _______________import__function__from__file_________________
 
 ------------------------------------------------------------
 
+    >>> say_my_name(1932)
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+------------------------------------------------------------
+
+    >>> say_my_name(1932, 13)
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+------------------------------------------------------------
+
+    >>> say_my_name(meth)
+    Traceback (most recent call last):
+    NameError: name 'meth' is not defined
+
+------------------------------------------------------------
+
+    >>> say_my_name("Jessi", Beckman)
+    Traceback (most recent call last):
+    NameError: name 'Beckman' is not defined
+
+------------------------------------------------------------
+
+    >>> say_my_name()
+    Traceback (most recent call last):
+    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+------------------------------------------------------------
+
+
                 *************************
                 |     END OF TESTS      |
                 *************************

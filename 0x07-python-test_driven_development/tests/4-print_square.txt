@@ -32,6 +32,12 @@ _______________import__function__from__file_________________
 
 ------------------------------------------------------------
 
+    >>> print_square()
+    Traceback (most recent call last):
+    TypeError: print_square() missing 1 required positional argument: 'size'
+
+------------------------------------------------------------
+
                 *************************
                 |     END OF TESTS      |
                 *************************

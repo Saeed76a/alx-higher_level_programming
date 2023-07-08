@@ -1,0 +1,111 @@
+                *************************
+                |     START OF TESTS     |
+                *************************
+_______________import__function__from__file_________________
+
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+       _______________Let's_check_it_________________
+------------------------------------------------------------
+
+    >>> matrix_divided([[3]], 3)
+    [[1.0]]
+
+------------------------------------------------------------
+
+    >>> matrix_divided([[3, 9], [12, 15]], -3)
+    [[-1.0, -3.0], [-4.0, -5.0]]
+
+------------------------------------------------------------
+
+    >>> matrix_divided([[45, 9], [22, 13]], 0)
+    Traceback (most recent call last):
+    ZeroDivisionError: division by zero
+
+------------------------------------------------------------
+
+    >>> matrix_divided([[2, 5], [13, 1, 5]], 3)
+    Traceback (most recent call last):
+    TypeError: Each row of the matrix must have the same size
+
+------------------------------------------------------------
+
+    >>> matrix_divided([[21, "22"], [13, 9]], -3)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+------------------------------------------------------------
+
+    >>> matrix_divided([[14, 7], [21, -49]], 7)
+    [[2.0, 1.0], [3.0, -7.0]]
+
+------------------------------------------------------------
+
+    >>> matrix_divided([[14, 7], [21, -49]], "OMAR")
+    Traceback (most recent call last):
+    TypeError: div must be a number
+
+------------------------------------------------------------
+
+    >>> matrix_divided("Hi am OMAR", -3)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+------------------------------------------------------------
+
+    >>> matrix_divided([[14, 7], [21, -49], [21, -49, 65]], 3)
+    Traceback (most recent call last):
+    TypeError: Each row of the matrix must have the same size
+
+------------------------------------------------------------
+
+    >>> matrix_divided([[14, 7], [21, -49], [21, 65]], float('inf'))
+    [[0.0, 0.0], [0.0, -0.0], [0.0, 0.0]]
+
+------------------------------------------------------------
+
+    >>> matrix_divided([[14, 7], [21, -49], [21, 65]], float('inf'))
+    [[0.0, 0.0], [0.0, -0.0], [0.0, 0.0]]
+
+------------------------------------------------------------
+
+    >>> matrix_divided([[14, 7], [21, float('inf')], [21, 65]], 1)
+    [[14.0, 7.0], [21.0, inf], [21.0, 65.0]]
+
+------------------------------------------------------------
+
+    >>> matrix_divided([[14, 7], [21, float('nan')], [21, 65]], 1)
+    [[14.0, 7.0], [21.0, nan], [21.0, 65.0]]
+
+------------------------------------------------------------
+
+    >>> matrix_divided([[14, 7], [21, float('inf')/float('nan')], [21, 65]], 1)
+    [[14.0, 7.0], [21.0, nan], [21.0, 65.0]]
+
+------------------------------------------------------------
+
+    >>> matrix_divided([[14, 7], [21, -49], [21, 65]], float('nan'))
+    [[nan, nan], [nan, nan], [nan, nan]]
+
+------------------------------------------------------------
+
+    >>> matrix_divided([[14, 7], [21, -49], [21, 65]], float('inf')/float('nan'))
+    [[nan, nan], [nan, nan], [nan, nan]]
+
+------------------------------------------------------------
+
+    >>> matrix_divided(-3)
+    Traceback (most recent call last):
+    TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+------------------------------------------------------------
+
+    >>> matrix_divided()
+    Traceback (most recent call last):
+    TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+------------------------------------------------------------
+
+                *************************
+                |     END OF TESTS      |
+                *************************

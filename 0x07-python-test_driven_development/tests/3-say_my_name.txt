@@ -1,0 +1,36 @@
+
+                *************************
+                |     START OF TESTS     |
+                *************************
+_______________import__function__from__file_________________
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+       _______________Let's_check_it_________________
+------------------------------------------------------------
+
+    >>> say_my_name("Walter", "White")
+    My name is Walter White
+
+------------------------------------------------------------
+
+    >>> say_my_name("Heisenberg")
+    My name is Heisenberg 
+
+------------------------------------------------------------
+
+    >>> say_my_name("Heisenberg", 1932)
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+------------------------------------------------------------
+
+    >>> say_my_name(1932, "Heisenberg")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+------------------------------------------------------------
+
+                *************************
+                |     END OF TESTS      |
+                *************************

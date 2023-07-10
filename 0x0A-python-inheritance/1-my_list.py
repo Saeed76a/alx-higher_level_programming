@@ -11,8 +11,8 @@ class MyList(list):
     declare a class MyList
     that inherits from list
     """
-    sorted_list = []
-
     def print_sorted(self):
-        MyList.sorted_list += self
-        print(sorted(MyList.sorted_list))
+        sorted_list = []
+        sorted_list += self
+        print(sorted(sorted_list))
+    pass

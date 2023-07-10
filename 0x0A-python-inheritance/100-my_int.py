@@ -5,6 +5,9 @@
 
 
 class MyInt(int):
+    """
+    a rebel of int
+    """
     def __eq__(self, other):
         """
         override the default behavior of ==

@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-9. Full rectangle 
+9. Full rectangle
 """
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
@@ -39,4 +39,4 @@ class Rectangle(BaseGeometry):
             the following rectangle description:
             [Rectangle] <width>/<height>
         """
-        return "[{}] {}/{}".format("Rectangle" , self.__width, self.__height)
+        return "[{}] {}/{}".format("Rectangle", self.__width, self.__height)

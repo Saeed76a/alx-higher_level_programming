@@ -1,7 +1,7 @@
 # 0x0C. Python - Almost a circle
 
 <p align="center">
-  <img src="https://example.com/your_image.png" alt="Project Logo">
+  <img src="https://static.wikia.nocookie.net/villains/images/2/2e/HomonculusFMA.png/revision/latest?cb=20180530210231" alt="Project Logo">
 </p>
 
 ## Description

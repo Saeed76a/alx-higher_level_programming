@@ -29,12 +29,13 @@ class Student:
         Args:
             attrs (list): list of attributes
         """
-        if attrs is None:
-            return self.__dict__
         my_dict = {}
-        for attr in attrs:
-            try:
-                my_dict[attr] = self.__dict__[attr]
-            except:
-                return self.__dict__
+        if attrs is not None:
+            for attr in attrs:
+                try:
+                    my_dict[attr] = self.__dict__[attr]
+                except Exception:
+                    pass
+        else:
+            return self.__dict__
         return my_dict

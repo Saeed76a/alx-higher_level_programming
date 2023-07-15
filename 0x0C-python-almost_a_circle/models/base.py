@@ -6,7 +6,7 @@ Base class
 
 class Base:
     """
-    This class will be the “base” of 
+    This class will be the “base” of
     all other classes in this project.
 
     description:
@@ -17,6 +17,7 @@ class Base:
             __nb_objects (int)
     """
     __nb_objects = 0
+
     def __init__(self, id=None):
         """
         Initialize the object with the provided arguments.

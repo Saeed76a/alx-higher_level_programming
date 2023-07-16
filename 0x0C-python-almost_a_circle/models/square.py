@@ -31,21 +31,21 @@ class Square(Rectangle):
     def size(self):
         """
         return
-        the size
+        the size of the square
         """
         return self.width
 
     @size.setter
     def size(self, value):
         """
-        size setter
+        size setter to set the size of the square
         """
         self.width = value
         self.height = value
 
     def update(self, *args, **kwargs):
         """
-        Update attributes
+        Update attributes of the anstance
         """
         i = 0
         if not args:
@@ -69,3 +69,11 @@ class Square(Rectangle):
             elif i == 3:
                 self.y = arg
             i += 1
+
+    def to_dictionary(self):
+        """
+        get the dictionary
+        representation of a Square
+        """
+        return {'id': self.x, 'x': self.x, 'size\
+': self.size, 'y': self.y}

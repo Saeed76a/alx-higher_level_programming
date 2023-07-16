@@ -1,6 +1,9 @@
 #!/usr/bin/python3
+import json
+"""importing json"""
 """
-Base class
+The Base class serves as the base class
+for other classes in the project.
 """
 
 
@@ -30,3 +33,9 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    def to_json_string(list_dictionaries):
+        """
+        return the string object of an list dictionaries
+        """
+        return json.dumps(list_dictionaries)

@@ -2,6 +2,7 @@
 """
 My square
 """
+from models.base import Base
 from models.rectangle import Rectangle
 
 
@@ -24,4 +25,47 @@ class Square(Rectangle):
 
     def __str__(self):
         return "[Square] ({}) {}/{} - {}\
-".format(self.id, super().x, super().y, super().height)
+".format(self.id, self.x, self.y, self.height)
+
+    @property
+    def size(self):
+        """
+        return
+        the size
+        """
+        return self.width
+
+    @size.setter
+    def size(self, value):
+        """
+        size setter
+        """
+        self.width = value
+        self.height = value
+
+    def update(self, *args, **kwargs):
+        """
+        Update attributes
+        """
+        i = 0
+        if not args:
+            for attri in kwargs:
+                if attri == "id":
+                    self.id = kwargs[attri]
+                if attri == "size":
+                    self.size = kwargs[attri]
+                if attri == "x":
+                    self.x = kwargs[attri]
+                if attri == "y":
+                    self.y = kwargs[attri]
+
+        for arg in args:
+            if i == 0:
+                self.id = arg
+            elif i == 1:
+                self.size = arg
+            elif i == 2:
+                self.x = arg
+            elif i == 3:
+                self.y = arg
+            i += 1

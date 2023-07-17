@@ -37,6 +37,8 @@ class Base:
         """
         return the string object of an list dictionaries
         """
+        if not list_dictionaries or list_dictionaries is None:
+            return "[]"
         return json.dumps(list_dictionaries)
 
 #     @classmethod

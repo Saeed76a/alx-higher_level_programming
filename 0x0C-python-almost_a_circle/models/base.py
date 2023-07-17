@@ -39,8 +39,8 @@ class Base:
         """
         return json.dumps(list_dictionaries)
 
-    @classmethod
-    def save_to_file(cls, list_objs):
-        with open("{}.json\
-".format(cls.__class__.__name__), 'w', encoding="utf-8") as file:
-            file.write(cls.to_json_string(list_objs))
+#     @classmethod
+#     def save_to_file(cls, list_objs):
+#         with open("{}.json\
+# ".format(cls.__class__.__name__), 'w', encoding="utf-8") as file:
+#             file.write(cls.to_json_string(list_objs))

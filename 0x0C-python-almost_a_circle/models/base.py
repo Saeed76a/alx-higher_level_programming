@@ -4,6 +4,7 @@ The Base class serves as the base class
 for other classes in the project.
 """
 import json
+import csv
 
 
 class Base:
@@ -98,6 +99,43 @@ class Base:
         try:
             with open("{}.json".format(cls.__name__), "r") as jsonfile:
                 list_dicts = Base.from_json_string(jsonfile.read())
+                return [cls.create(**d) for d in list_dicts]
+        except IOError:
+            return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """
+        Save the csv to a file
+        """
+        with open("{}.csv".format(cls.__name__), "w", newline="") as csv_f:
+            if list_objs is None or list_objs == []:
+                csv_f.write("[]")
+            else:
+                if cls.__name__ == "Rectangle":
+                    fieldnames = ["id", "width", "height", "x", "y"]
+                elif cls.__name__ == "Square":
+                    fieldnames = ["id", "size", "x", "y"]
+                writer = csv.DictWriter(csv_f, fieldnames=fieldnames)
+                for obj in list_objs:
+                    writer.writerow(obj.to_dictionary())
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """
+        the class method
+        that get instance with all
+        attributes from a csv file
+        """
+        try:
+            with open("{}.csv".format(cls.__name__), "r", newline="") as csv_f:
+                if cls.__name__ == "Rectangle":
+                    fieldnames = ["id", "width", "height", "x", "y"]
+                elif cls.__name__ == "Square":
+                    fieldnames = ["id", "size", "x", "y"]
+                list_dicts = csv.DictReader(csv_f, fieldnames=fieldnames)
+                list_dicts = [dict([k, int(v)] for k, v in d.items())
+                              for d in list_dicts]
                 return [cls.create(**d) for d in list_dicts]
         except IOError:
             return []

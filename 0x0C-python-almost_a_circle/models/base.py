@@ -87,3 +87,17 @@ class Base:
             my_dummy = cls(1, 1)
         my_dummy.update(**dictionary)
         return my_dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """
+        the class method
+        that get instance with all
+        attributes from a file
+        """
+        try:
+            with open("{}.json".format(cls.__name__), "r") as jsonfile:
+                list_dicts = Base.from_json_string(jsonfile.read())
+                return [cls.create(**d) for d in list_dicts]
+        except IOError:
+            return []

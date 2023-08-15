@@ -1,2 +1,2 @@
----Desplay DATABases.
+-- Desplay DATABases.
 SHOW DATABASES;

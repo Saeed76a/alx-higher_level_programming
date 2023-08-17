@@ -1,4 +1,4 @@
--- addition
+-- additional
 SELECT title, SUM(rate) AS rating
   FROM tv_shows
        INNER JOIN tv_show_ratings

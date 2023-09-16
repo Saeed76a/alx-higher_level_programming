@@ -1,7 +1,9 @@
 #!/usr/bin/python3
+"""Get all states"""
 
 import MySQLdb
 from sys import argv
+
 
 db = MySQLdb.connect(
     host="localhost",

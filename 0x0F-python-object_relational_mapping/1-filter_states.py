@@ -14,7 +14,7 @@ if __name__ == "__main__":
     )
     cur = db.cursor()
 
-    cur.execute("SELECT name, id FROM states WHERE name LIKE 'N%';")
+    cur.execute("SELECT * FROM states WHERE name LIKE 'N%';")
     all_rows = cur.fetchall()
 
     for one in all_rows:

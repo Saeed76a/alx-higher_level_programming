@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""all cities"""
 
 if __name__ == '__main__':
 

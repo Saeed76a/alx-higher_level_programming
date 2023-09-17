@@ -19,3 +19,4 @@ if __name__ == "__main__":
     city_obj = City(name='San Francisco', state_id=state_obj.id)
     session.add(city_obj)
     session.commit()
+    session.close()

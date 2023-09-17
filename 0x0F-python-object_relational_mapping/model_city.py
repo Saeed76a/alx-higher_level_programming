@@ -1,12 +1,14 @@
 #!/usr/bin/python3
 """
 creat city class
-That inhiret from bases"""
+"""
 from sqlalchemy import Column, Integer, String, ForeignKey
 from model_state import Base, State
 
 
 class City(Base):
+    """
+    city class"""
     __tablename__ = 'cities'
     id = Column(Integer,
                 primary_key=True,

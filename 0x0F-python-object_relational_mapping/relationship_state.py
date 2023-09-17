@@ -16,7 +16,8 @@ class State(Base):
     id = Column(Integer,
                 primary_key=True,
                 autoincrement=True,
-                nullable=False
+                nullable=False,
+                unique=True
                 )
     name = Column(String(128), nullable=False)
     cities = relationship("City",

@@ -2,8 +2,8 @@
 """ Get a state
 """
 from sys import argv
-from model_state import Base, State
-from model_city import City
+from relationship_state import Base, State
+from relationship_city import City
 from sqlalchemy.orm import sessionmaker
 
 from sqlalchemy import (create_engine)
@@ -13,7 +13,8 @@ if __name__ == "__main__":
 '.format(argv[1], argv[2], argv[3]), pool_pre_ping=True)
     Base.metadata.create_all(engine)
     session = sessionmaker(bind=engine)()
-    state_obj = State(name='California')
+    state_obj = State()
+    state_obj.name = 'California'
     session.add(state_obj)
     session.commit()
     city_obj = City()

@@ -13,17 +13,19 @@ if __name__ == "__main__":
 '.format(argv[1], argv[2], argv[3]), pool_pre_ping=True)
     Base.metadata.create_all(engine)
     session = sessionmaker(bind=engine)()
-    all = session.query(State, City).filter(City.state_id == State.id).all()
-    dictionary = {}
+    all = session.query(State).all()
+#     dictionary = {}
+#     for state in all:
+#         dictionary['{}: {}\
+# '.format(state[0].id, state[0].name)] = []
+#         for __ in all:
+#             if state[0].name == __[0].name:
+#                 dictionary['{}: {}\
+# '.format(state[0].id, state[0].name)].append('\t{}: {}\
+# '.format(__[1].id, __[1].name))
     for state in all:
-        dictionary['{}: {}\
-'.format(state[0].id, state[0].name)] = []
-        for __ in all:
-            if state[0].name == __[0].name:
-                dictionary['{}: {}\
-'.format(state[0].id, state[0].name)].append('\t{}: {}\
-'.format(__[1].id, __[1].name))
-    for state in dictionary:
-        print(state)
-        for city in dictionary[state]:
-            print(city)
+        print('{}: {}\
+'.format(state.id, state.name))
+        for city in state.cities:
+            print('\t{}: {}\
+'.format(city.id, city.name))

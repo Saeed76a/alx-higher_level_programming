@@ -6,7 +6,7 @@ from relationship_state import Base, State
 from relationship_city import City
 from sqlalchemy.orm import sessionmaker
 
-from sqlalchemy import (create_engine)
+from sqlalchemy import create_engine
 
 if __name__ == "__main__":
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}\
@@ -15,11 +15,9 @@ if __name__ == "__main__":
     session = sessionmaker(bind=engine)()
     state_obj = State()
     state_obj.name = 'California'
-    session.add(state_obj)
-    session.commit()
     city_obj = City()
     city_obj.name = 'San Francisco'
-    city_obj.state_id = state_obj.id
-    session.add(city_obj)
+    state_obj.cities.append(city_obj)
+    session.add_all([state_obj, city_obj])
     session.commit()
     session.close()

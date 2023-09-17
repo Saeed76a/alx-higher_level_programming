@@ -16,5 +16,5 @@ if __name__ == "__main__":
 ".format(argv[4])).order_by(State.id.asc()).all()
     if all_a == []:
         print("Not found")
-    for first in all_a:
-        print(first.id, first.name, sep=': ')
+    else:
+        print(all_a[0].id)

@@ -3,7 +3,7 @@
 creat city class
 """
 from sqlalchemy import Column, Integer, String, ForeignKey
-from model_state import Base, State
+from model_state import Base
 
 
 class City(Base):

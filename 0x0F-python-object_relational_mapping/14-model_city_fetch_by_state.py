@@ -13,4 +13,7 @@ if __name__ == "__main__":
 '.format(argv[1], argv[2], argv[3]), pool_pre_ping=True)
     Base.metadata.create_all(engine)
     session = sessionmaker(bind=engine)()
-    cities = session.query(City).all()
+    all = session.query(City, State).\
+    filter(City.state_id == State.id).all()
+    for city, state in all:
+        print("{}: ({}) {}".format(state.name, city.id, city.name))

@@ -1,7 +1,7 @@
 #!/usr/bin/python3
+"""hard coding is a hard working"""
 import urllib.request
 import sys
-"""hard coding is a hard working"""
 
 if __name__ == '__main__':
     data = urllib.parse.urlencode({'email': sys.argv[2]}).encode('utf-8')

@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""give me requist id baliz"""
 import urllib.request
 import sys
 

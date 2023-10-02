@@ -1,0 +1,6 @@
+#!/usr/bin/bash
+# ++++++++++++++++++++
+sudo sed -i "/^}$/i \ \nadd_header X-Served-By $HOSTNAME;\t\n" /etc/nginx/sites-available/default
+# ++++++++++++++++++++
+
+sudo server nginx restart

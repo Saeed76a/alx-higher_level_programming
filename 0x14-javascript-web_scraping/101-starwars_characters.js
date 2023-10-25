@@ -12,7 +12,7 @@ request.get(`https://swapi-api.alx-tools.com/api/films/${id}/`, async (err, resp
     const people = JSON.parse(resp.body).characters;
     for (const i in people) {
       try {
-        let respence = await reqPromis(people[i]);
+        const respence = await reqPromis(people[i]);
         console.log(JSON.parse(respence.body).name);
       } catch (err) {
         console.error(err);

@@ -1,5 +1,6 @@
 #!/usr/bin/node
-const util = require('node:util');
+
+const util = require('util');
 const request = require('request');
 
 const id = process.argv[2];

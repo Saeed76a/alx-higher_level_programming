@@ -2,7 +2,7 @@
 
 const request = require('request');
 
-// const url = process.argv[2];
+const url = process.argv[2];
 // let num = 0;
 // request.get(url, (err, resp) => {
 //   if (err) {
@@ -17,10 +17,11 @@ const request = require('request');
 //     console.log(num);
 //   }
 // });
-request.get('https://swapi-api.alx-tools.com/api/people/18/', (err, resp) => {
+
+request.get(url, (err, resp) => {
   if (err) {
     console.error(err);
   } else {
-    console.log(JSON.parse(resp.body).films.length);
+    console.log(resp.body.split('https://swapi-api.alx-tools.com/api/people/18/').length - 1);
   }
 });

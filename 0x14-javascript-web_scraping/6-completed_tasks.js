@@ -15,8 +15,6 @@ request.get(url, (err, resp) => {
         obj[key] = tasks[i].completed ? obj[key] + 1 : obj[key];
       } else if (tasks[i].completed) {
         obj[key] = 1;
-      } else {
-        obj[key] = 0;
       }
     }
     console.log(obj);

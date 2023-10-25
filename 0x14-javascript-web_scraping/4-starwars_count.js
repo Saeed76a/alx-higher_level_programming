@@ -14,6 +14,6 @@ request.get(url, (err, resp) => {
         num++;
       }
     }
-    console.log(num);
+    console.log(num.toString());
   }
 });

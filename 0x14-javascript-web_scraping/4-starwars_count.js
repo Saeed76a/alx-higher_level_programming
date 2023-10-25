@@ -25,11 +25,9 @@ request(url, function (err, body) {
     const { results } = JSON.parse(body.body);
 
     results.forEach((element, i) => {
-      element.characters.forEach((element, j) => {
-        if (element.includes('/18/')) {
-          counter++;
-        }
-      });
+      if (element.characters.includes('https://swapi-api.alx-tools.com/api/people/18/')) {
+        counter++;
+      }
     });
     console.log(counter);
   }
